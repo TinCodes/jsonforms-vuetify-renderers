@@ -62,6 +62,7 @@ const currentTheme = defineComponent({
     themes(): any {
       const themes = this.$store.getters['themes/getSummaryThemes'];
       const colors = [];
+      debugger;
       themes.forEach((element) => {
         colors.push({
           ...merge(cloneDeep(defaultTheme), {

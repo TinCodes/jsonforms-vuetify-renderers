@@ -1,4 +1,5 @@
 import _ from 'lodash';
+const custom = 'custom';
 const mutations = {
   SET_ADD_THEME: (state: any, payload: any) => {
     state.themes.push(payload);
@@ -7,6 +8,10 @@ const mutations = {
     state.active = payload;
   },
   SET_UPDATE_THEME: (state: any, payload: any) => {
+    debugger;
+    /*if (!state.themes[custom]) {
+      state.themes[custom] = payload;
+    }*/
     const themes = _.cloneDeep(state.themes);
     let customTheme = false;
     _.forEach(themes, (value, key) => {
@@ -18,22 +23,25 @@ const mutations = {
       }
     });
     if (!customTheme) {
-      state.themes.push(payload);
+      state.themes = { ...state.themes, custom: payload };
       state.active = payload.name;
     }
   },
   UPDATE_PADDINGS: (state: any, payload: any) => {
-    state.customForm.paddings = payload;
+    const currentTheme = state.active;
+    state[currentTheme].paddings = payload;
   },
   UPDATE_MARGINS: (state: any, payload: any) => {
-    debugger;
-    state.customForm.margins = payload;
+    const currentTheme = state.active;
+    state[currentTheme].margins = payload;
   },
   UPDATE_BACKGROUND: (state: any, payload: any) => {
-    state.customForm.background = payload;
+    const currentTheme = state.active;
+    state[currentTheme].background.imgSrc = payload;
   },
   UPDATE_BACKGROUND_COLOR: (state: any, payload: any) => {
-    state.customForm.backgroundColor = payload;
+    const currentTheme = state.active;
+    state[currentTheme].background.color = payload;
   },
 };
 export default mutations;

@@ -11,42 +11,28 @@ const getters = {
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getFontFamilyTheme: (state: any) => {
-    let fontFamily = '';
-    _.forEach(state.themes, (value) => {
-      if (state.active === value.name) {
-        fontFamily = value.fontFamily;
-      }
-    });
-    return fontFamily;
+    const currentTheme = state.active;
+    return state.themes[currentTheme].fontFamily;
   },
   getThemeSelected: (state: any) => {
-    const defaultTheme = state.themes[0].light;
-    let theme = {};
-    const themes = _.cloneDeep(state.themes);
-    let mergeLight;
-    _.forEach(themes, (value) => {
-      if (state.active === value.name) {
-        mergeLight = _.merge(_.cloneDeep(defaultTheme), value.light);
-        theme = {
-          name: value.name,
-          light: mergeLight,
-          fontFamily: value.fontFamily,
-        };
-      }
-    });
-    return theme;
+    const currentTheme = state.active;
+    return state.themes[currentTheme];
   },
   getPaddings: (state: any) => {
-    return state.customForm.paddings;
+    const currentTheme = state.active;
+    return state.themes[currentTheme].paddings;
   },
   getMargins: (state: any) => {
-    return state.customForm.margins;
+    const currentTheme = state.active;
+    return state.themes[currentTheme].margins;
   },
   getBackground: (state: any) => {
-    return state.customForm.background;
+    const currentTheme = state.active;
+    return state.themes[currentTheme].background.imgSrc;
   },
   getBackgroundColor: (state: any) => {
-    return state.customForm.backgroundColor;
+    const currentTheme = state.active;
+    return state.themes[currentTheme].background.color;
   },
 };
 export default getters;

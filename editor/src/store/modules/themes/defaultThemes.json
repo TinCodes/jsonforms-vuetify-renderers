@@ -1,5 +1,5 @@
-[
-  {
+{
+  "Default": {
     "name": "Default",
     "light": {
       "primary": "#1976D2",
@@ -10,59 +10,171 @@
       "success": "#4CAF50",
       "warning": "#FB8C00"
     },
-    "fontFamily": "Roboto"
+    "fontFamily": "Roboto",
+    "paddings": {
+      "top": 100,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   },
-  {
+  "Basil": {
     "name": "Basil",
     "light": {
       "primary": "#356859",
       "secondary": "#FD5523",
       "accent": "#37966F",
-      "info": "#356859"
+      "error": "#FF5252",
+      "info": "#356859",
+      "success": "#4CAF50",
+      "warning": "#FB8C00"
     },
-    "fontFamily": "Comic Neue"
+    "fontFamily": "Comic Neue",
+    "paddings": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   },
-  {
+  "Crane": {
     "name": "Crane",
     "light": {
       "primary": "#5D1049",
       "secondary": "#E30425",
       "accent": "#4E0D3A",
-      "info": "#5D1049"
+      "error": "#FF5252",
+      "info": "#5D1049",
+      "success": "#4CAF50",
+      "warning": "#FB8C00"
     },
-    "fontFamily": "Fira Code"
+    "fontFamily": "Fira Code",
+    "paddings": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   },
-  {
+  "Fortnightly": {
     "name": "Fortnightly",
     "light": {
       "primary": "#6B38FB",
       "secondary": "#6B38FB",
-      "info": "#6B38FB"
+      "accent": "#82B1FF",
+      "error": "#FF5252",
+      "info": "#6B38FB",
+      "success": "#4CAF50",
+      "warning": "#FB8C00"
     },
-    "fontFamily": "Inconsolata"
+    "fontFamily": "Inconsolata",
+    "paddings": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   },
-  {
+  "Owl": {
     "name": "Owl",
     "light": {
       "primary": "#FFDE03",
       "secondary": "#0336FF",
       "accent": "#FF0266",
-      "info": "#FFDE03"
+      "error": "#FF5252",
+      "info": "#FFDE03",
+      "success": "#4CAF50",
+      "warning": "#FB8C00"
     },
-    "fontFamily": "Oxygen"
+    "fontFamily": "Oxygen",
+    "paddings": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   },
-  {
+  "Shrine": {
     "name": "Shrine",
     "light": {
       "primary": "#FEDBD0",
       "secondary": "#FEEAE6",
       "accent": "#442C2E",
-      "info": "#FEDBD0"
+      "error": "#FF5252",
+      "info": "#FEDBD0",
+      "success": "#4CAF50",
+      "warning": "#FB8C00"
     },
-    "fontFamily": "Tapestry"
+    "fontFamily": "Tapestry",
+    "paddings": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   },
-  {
-    "name": "admin",
+  "Admin": {
+    "name": "Admin",
     "light": {
       "primary": "#32c787",
       "secondary": "#868e96",
@@ -72,6 +184,22 @@
       "success": "#32c787",
       "warning": "#ffc721"
     },
-    "fontFamily": "Tapestry"
+    "fontFamily": "Tapestry",
+    "paddings": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": {
+      "imgSrc": "",
+      "color": "#FFFFFF"
+    }
   }
-]
+}

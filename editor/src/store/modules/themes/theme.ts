@@ -6,29 +6,14 @@ import getters from './getters';
 import defaultThemes from './defaultThemes.json';
 
 export interface ThemeState {
-  themes: any;
   active: string;
-  customForm: any;
+  themes: any;
+  custom: boolean;
 }
 const state: ThemeState = {
-  themes: defaultThemes,
   active: 'Default',
-  customForm: {
-    paddings: {
-      paddingTop: '',
-      paddingRight: '',
-      paddingBottom: '',
-      paddingLeft: '',
-    },
-    margins: {
-      top: '',
-      right: '',
-      bottom: '',
-      left: '',
-    },
-    background: '',
-    backgroundColor: '#FFFFFF',
-  },
+  themes: defaultThemes,
+  custom: false,
 };
 const themes: Module<ThemeState, RootState> = {
   namespaced: true,

@@ -9,7 +9,13 @@
     </v-col>
     <v-col cols="12" sm="12" md="12">
       <span>Color Primary</span>
-      <v-text-field v-model="color.primary" hide-details solo readonly>
+      <v-text-field
+        v-model="color.primary"
+        @change="setCustom"
+        hide-details
+        solo
+        readonly
+      >
         <template v-slot:append>
           <v-menu
             v-model="menu.primary"
@@ -17,7 +23,6 @@
             nudge-bottom="105"
             nudge-left="16"
             :close-on-content-click="false"
-            @input="setCustom"
           >
             <template v-slot:activator="{ on }">
               <div :style="swatchStyle('primary')" v-on="on" />
@@ -299,17 +304,19 @@ const CustomizeTheme = defineComponent({
       };
     },
     setCustom(): void {
+      debugger;
       const name = this.customThemeName;
       const light = this.color;
-      if (!_.isEqual(light, this.defaultColor)) {
-        Object.keys(light).forEach((i) => {
-          this.$vuetify.theme.themes.light[i] = light[i];
-        });
-        this.$vuetify.theme.currentTheme.name = name;
-        this.updateTheme();
-      }
+      //if (!_.isEqual(light, this.defaultColor)) {
+      Object.keys(light).forEach((i) => {
+        this.$vuetify.theme.themes.light[i] = light[i];
+      });
+      this.$vuetify.theme.currentTheme.name = name;
+      this.updateTheme();
+      //}
     },
     updateTheme(font: string): void {
+      debugger;
       let fontFamily = font ? font : _.clone(this.fontFamily);
       this.$store.set('themes/updateTheme', {
         name: this.customThemeName,
